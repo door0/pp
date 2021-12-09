@@ -2,9 +2,10 @@ import React from 'react';
 
 const Projects = () => {
   return (
-    <div>
-      
-    </div>
+    <setcion className="projects-page">
+      <h1>projects</h1>
+      <p>실습해보는 페이지입니다.</p>
+    </setcion>
   );
 }
 

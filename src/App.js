@@ -15,17 +15,23 @@ function App() {
           <h2>WebDev</h2>
         </div>
         <div className="nav-links">
-          <Link to="/">Home</Link>          
+          <Link to="/home">Home</Link>          
           <Link to="/about">About</Link>         
           <Link to="/projects">Projects</Link>         
-          <Link to="/contact">Contact</Link>
-          <Routes> 
+          <Link to="/contact">Contact</Link>      
+        </div>
+        <Routes> 
             <Route exact path='/about' element={<About/>} />
             <Route exact path='/projects' element={<Projects/>} />
             <Route exact path='/contact' element={<Contact/>} />
-            <Route exact path='/' element={<Home/>} />
+            <Route exact path='/home' element={<Home/>} />
+            <Route render={({ location }) => 
+              <div>
+                <h2>이 페이지는 존재하지 않습니다.</h2>
+                <p>{location.pathname}</p>
+              </div> 
+            }/>
           </Routes>
-        </div>
       </div>
     </div>
     </>
